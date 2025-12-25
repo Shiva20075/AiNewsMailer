@@ -9,6 +9,27 @@ import java.time.Duration;
 import java.util.List;
 import java.util.Properties;
 
+/**
+ * AiNewsMailer is a Java application designed to run as an AWS Lambda function
+ * that automatically generates a daily news summary using the OpenAI Chat
+ * Completion API and delivers it via email using Gmail SMTP.
+ *
+ * <p>The class implements {@link RequestHandler} to expose the
+ * {@code handleRequest} method as the Lambda entry point and uses the
+ * {@link Context} object for runtime logging.</p>
+ *
+ * <p>An {@link OpenAiService} client is lazily initialized using an API key
+ * stored in environment variables and reused across executions for efficiency.</p>
+ *
+ * <p>The application constructs a chat completion request, retrieves AI-
+ * generated news content, formats it into an email body, and sends it using
+ * authenticated and encrypted SMTP communication.</p>
+ *
+ * <p>The class also includes a {@code main} method to allow local execution
+ * and testing outside the AWS Lambda environment.</p>
+ */
+
+
 public class AiNewsMailer implements RequestHandler<Object, String> {
 
     private static final String FROM_EMAIL = "palleshiva2007@gmail.com";
