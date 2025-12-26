@@ -22,7 +22,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>com.example.AiNewsMailer</mainClass>
+                  <mainClass>com.shiva.AiNewsMailer</mainClass>
                 </transformer>
               </transformers>
             </configuration>

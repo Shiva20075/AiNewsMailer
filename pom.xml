@@ -19,6 +19,12 @@
     </properties>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/io.rocketbase.commons/email-template-builder -->
+        <dependency>
+            <groupId>io.rocketbase.commons</groupId>
+            <artifactId>email-template-builder</artifactId>
+            <version>1.6.0</version>
+        </dependency>
 
         <!-- OpenAI Java SDK (STABLE, COMPATIBLE) -->
         <dependency>
@@ -74,7 +80,7 @@
                         <configuration>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>com.example.AiNewsMailer</mainClass>
+                                    <mainClass>com.shiva.AiNewsMailer</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
