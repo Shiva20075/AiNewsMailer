@@ -25,7 +25,7 @@ import java.util.List;
  * deterministic output.
  */
 
-public class AiNewsService {
+public class AiNewsProvider {
 
     private static OpenAiService openAiService;
     private static OpenAiService getOpenAiService() {

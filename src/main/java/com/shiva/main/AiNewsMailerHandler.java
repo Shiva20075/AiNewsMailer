@@ -1,7 +1,7 @@
 package com.shiva.main;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
-import com.shiva.aiService.AiNewsService;
+import com.shiva.aiService.AiNewsProvider;
 import com.shiva.emailTempBuilder.EmailTemplateBuilder;
 import com.shiva.mailService.EmailService;
 
@@ -28,7 +28,7 @@ import com.shiva.mailService.EmailService;
 
     public String handleRequest(Object input, Context context) {
         try {
-            String news = AiNewsService.fetchNews();
+            String news = AiNewsProvider.fetchNews();
             String newsTemplate = EmailTemplateBuilder.buildNewsTemplate(news);
             EmailService.sendHtmlMail(newsTemplate);
             return "SUCCESS: EMAIL SENT SUCCESSFULLY";
@@ -40,7 +40,7 @@ import com.shiva.mailService.EmailService;
 
     public static void main(String[] args) {
         try {
-            String news = AiNewsService.fetchNews();
+            String news = AiNewsProvider.fetchNews();
             String newsTemplate = EmailTemplateBuilder.buildNewsTemplate(news);
             EmailService.sendHtmlMail(newsTemplate);
             System.out.println("SUCCESS: EMAIL SENT SUCCESSFULLY.");
