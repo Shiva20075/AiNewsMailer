@@ -21,9 +21,8 @@ import java.util.Properties;
 public class EmailService {
 
     private static final String FROM_EMAIL = "palleshiva2007@gmail.com";
-    private static final String TO_EMAIL   = "pallesumathi18@gmail.com";
 
-    public static void sendHtmlMail(String mailTemplate) throws Exception {
+    public static void sendHtmlMail(String recipient, String mailTemplate) throws Exception {
 
         String smtpPass = System.getenv("SMTP_PASS");
         if (smtpPass == null || smtpPass.isBlank()) {
@@ -37,16 +36,17 @@ public class EmailService {
         props.put("mail.smtp.starttls.enable", "true");
 
         Session session = Session.getInstance(props, new Authenticator() {
-                    protected PasswordAuthentication getPasswordAuthentication() {
-                        return new PasswordAuthentication(FROM_EMAIL, smtpPass);
-                    }
-                });
+            protected PasswordAuthentication getPasswordAuthentication() {
+                return new PasswordAuthentication(FROM_EMAIL, smtpPass);
+            }
+        });
 
         Message message = new MimeMessage(session);
         message.setFrom(new InternetAddress(FROM_EMAIL));
-        message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(TO_EMAIL));
+        message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(recipient));
         message.setSubject("Today's Top News Summary");
         message.setContent(mailTemplate, "text/html; charset=UTF-8");
         Transport.send(message);
     }
 }
+
