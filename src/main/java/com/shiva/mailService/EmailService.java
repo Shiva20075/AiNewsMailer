@@ -7,20 +7,20 @@ import java.util.Properties;
 /**
  * EmailService is a utility class responsible for sending HTML-formatted emails
  * using the Jakarta Mail API with Gmail SMTP.
- *
+
  * It reads the SMTP application password securely from the SMTP_PASS environment
  * variable to avoid hardcoding credentials.
- *
+
  * The class configures SMTP properties such as host, port, authentication, and
  * STARTTLS encryption to ensure secure email delivery.
- *
+
  * The sendHtmlMail method accepts an HTML template string and delivers it as
  * a MIME email message with UTF-8 encoding.
  */
 
 public class EmailService {
 
-    private static final String FROM_EMAIL = "palleshiva2007@gmail.com";
+    private static final String FROM_EMAIL = System.getenv("FROM_EMAIL");
 
     public static void sendHtmlMail(String recipient, String mailTemplate) throws Exception {
 
