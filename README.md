@@ -1,4 +1,3 @@
-
 # AiNewsMailer
 
 
@@ -174,7 +173,8 @@ com.yourpackage.yourClassName::handleRequest
 ## Configure environment variables in the Lambda console
 * In the Lambda function page, click the Configuration tab.
 * From the left-side menu, click Environment variables.
-* Click the Edit button. Add these
+* Click the Edit button. Add these.
+
 | Key | Value |
 | ------------- |:-------------:|
 |OPENAI_API_KEY     | Enter Your API KEY     |
