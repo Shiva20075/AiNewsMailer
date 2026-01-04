@@ -1,6 +1,16 @@
-# AiNewsMailer
+<p align="center">
+  <img src="https://img.shields.io/badge/Build-Success-brightgreen" alt="Build Success" />
+  <img src="https://img.shields.io/badge/AI-Automation-purple" alt="AI Automation" />
+  <img src="https://img.shields.io/badge/Java-17-orange" alt="Java 17" />
+  <img src="https://img.shields.io/badge/AWS-Lambda-yellow" alt="AWS Lambda" />
+  <img src="https://img.shields.io/badge/AWS-S3-orange" alt="Amazon S3" />
+  <img src="https://img.shields.io/badge/Architecture-Serverless-success" alt="Serverless Architecture" />
+      <img src="https://img.shields.io/badge/Email-SMTP-blue" alt="SMTP Email" />
+
+</p>
 
 
+<h1 align="center">🤖 AiNewsMailer ✉️</h1>
 
 ## Introduction
 AiNewsMailer is a Java-based application that automatically creates news content using AI and sends it to people through email. The main purpose of this project is to reduce the manual effort required to prepare and send regular news or information emails.
@@ -59,9 +69,9 @@ You may be using [Markdown Live Preview](https://markdownlivepreview.com/). -->
 * An OpenAI API key 
 
 
-## AWS SetUp
+## AWS SetUp ☁️
 ---
-## S3  
+## S3 🪣
 1. Sign in using your AWS account 
 2. In the top search bar, type S3 and open the Amazon S3 service
 3. Create a bucket, Enter your bucket name,Select region,Leave other settings default
