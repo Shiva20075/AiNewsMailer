@@ -1,3 +1,5 @@
+<h1 align="center">🤖 AiNewsMailer ✉️</h1>
+
 <p align="center">
   <img src="https://img.shields.io/badge/Build-Success-brightgreen" alt="Build Success" />
   <img src="https://img.shields.io/badge/AI-Automation-purple" alt="AI Automation" />
@@ -10,7 +12,6 @@
 </p>
 
 
-<h1 align="center">🤖 AiNewsMailer ✉️</h1>
 
 ## Introduction
 AiNewsMailer is a Java-based application that automatically creates news content using AI and sends it to people through email. The main purpose of this project is to reduce the manual effort required to prepare and send regular news or information emails.
